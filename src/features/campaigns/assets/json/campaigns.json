@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Protectors of Tiamat",
+        "heroImg": "protectors_of_tiamat.jpg",
+        "sections": [
+            {
+                "subTitle": "An Unexpected Duty",
+                "paragraph": "In the vast, chaotic expanse of the Nine Hells, a group of adventurers find themselves in the service of the fearsome dragon goddess, Tiamat. But instead of battling against her, they are tasked with protecting her from an imminent threat. As unexpected champions of one of the most feared beings in the multiverse, the adventurers must navigate a web of deceit and danger, forging unlikely alliances along the way."
+            },
+            {
+                "subTitle": "Twists and Turns",
+                "paragraph": "As they delve deeper into the Nine Hells, the adventurers uncover secrets that challenge their perceptions of good and evil. They must balance their mission with their own moral compass, facing choices that will test their loyalty and courage. The line between hero and villain blurs in this thrilling adventure."
+            },
+            {
+                "subTitle": "A World of Fire and Fury",
+                "paragraph": "Set against the backdrop of the fiery and treacherous Nine Hells, the campaign offers a unique twist on the classic hero's journey. With each step, the adventurers get closer to uncovering the true nature of the threat against Tiamat and their ultimate destiny in the infernal planes."
+            }
+        ],
+        "setting": "Nine Hells",
+        "releaseDate": "2023-11-05"
+    },
+    {
+        "title": "Misfits of Waterdeep",
+        "heroImg": "misfits_of_waterdeep.jpg",
+        "sections": [
+            {
+                "subTitle": "Not Your Average Heroes",
+                "paragraph": "In the bustling city of Waterdeep, a motley crew of unlikely adventurers comes together. Instead of seeking glory and fame, they find themselves wrapped up in the city's underbelly, working for a mysterious patron with questionable motives. Their mission? To maintain the delicate balance of power among Waterdeep's most dangerous factions."
+            },
+            {
+                "subTitle": "Comedy and Chaos",
+                "paragraph": "The Misfits stumble through a series of misadventures, their bumbling antics often leading to unintended consequences. But through their chaotic endeavors, they manage to forge bonds of friendship and uncover deeper plots threatening the city's safety."
+            },
+            {
+                "subTitle": "A City of Wonders",
+                "paragraph": "Waterdeep, the City of Splendors, provides a rich and vibrant setting filled with intrigue, magic, and danger. The adventurers explore its many layers, from the noble estates to the shadowy docks, uncovering secrets that challenge their perceptions and push them to grow beyond their roles as mere misfits."
+            }
+        ],
+        "setting": "Waterdeep",
+        "releaseDate": "2024-01-15"
+    }
+]
