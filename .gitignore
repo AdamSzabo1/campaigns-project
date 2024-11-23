@@ -70,3 +70,4 @@ node_modules/
 
 # built resources
 dist/js
+dist/assets

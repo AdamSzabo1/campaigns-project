@@ -1,6 +1,7 @@
 [
     {
         "title": "Protectors of Tiamat",
+        "slug": "protectors-of-tiamat",
         "heroImg": "protectors_of_tiamat.jpg",
         "sections": [
             {
@@ -21,6 +22,7 @@
     },
     {
         "title": "Misfits of Waterdeep",
+        "slug": "misfits-of-waterdeep",
         "heroImg": "misfits_of_waterdeep.jpg",
         "sections": [
             {
