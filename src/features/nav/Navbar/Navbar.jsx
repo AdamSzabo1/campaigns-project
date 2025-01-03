@@ -1,6 +1,9 @@
 import { Link } from "react-router";
+import { getFirebaseApp } from "../../firebase";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
-const Navbar = () => {
+const Navbar = ({ userEmail }) => {
+
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container">
@@ -35,6 +38,23 @@ const Navbar = () => {
                             <Link className="nav-link" to={'/campaigns/upload'}>
                                 Upload
                             </Link>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul className="navbar-nav" >
+                        <li className="nav-item" >
+                            {
+                                userEmail
+                                ? <Link className="nav-link" to={'/auth/user-profile'}>
+                                    {userEmail}
+                                </Link>
+                                : <Link className="nav-link" to={'/auth/login'}>
+                                    Login
+                                </Link>
+                            }
+                            
                         </li>
                     </ul>
                 </div>

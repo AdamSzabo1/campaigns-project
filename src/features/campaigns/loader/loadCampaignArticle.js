@@ -1,12 +1,13 @@
-import getCampaigns from "../api/getCampaigns";
+import getCampaignArticle from "../api/getCampaignArticle";
 
 export default async function loadCampaignArticle({ params={} }) {
 
-    const campaigns = await getCampaigns();
-
     const { campaignSlug } = params;
 
-    const article = campaigns.find(item => item.slug === campaignSlug);
+    const campaign = await getCampaignArticle(campaignSlug);
 
-    return article;
+    console.log('campaign');
+    console.log(campaign);
+
+    return campaign;
 }

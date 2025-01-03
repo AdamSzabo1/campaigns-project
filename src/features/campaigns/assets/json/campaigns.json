@@ -1,7 +1,8 @@
 [
     {
+        "id": "1231qasda",
         "title": "Protectors of Tiamat",
-        "slug": "protectors-of-tiamat",
+        "slug": "protectors_of_tiamat",
         "heroImg": "protectors_of_tiamat.jpg",
         "sections": [
             {
@@ -21,8 +22,9 @@
         "releaseDate": "2023-11-05"
     },
     {
+        "id": "1231qagsfgsda",
         "title": "Misfits of Waterdeep",
-        "slug": "misfits-of-waterdeep",
+        "slug": "misfits_of_waterdeep",
         "heroImg": "misfits_of_waterdeep.jpg",
         "sections": [
             {
@@ -40,5 +42,49 @@
         ],
         "setting": "Waterdeep",
         "releaseDate": "2024-01-15"
+    },
+    {
+        "id": "7890qwertyuio",
+        "title": "The Goblin Orchestra",
+        "slug": "goblin_orchestra",
+        "heroImg": "goblin_orchestra.jpg",
+        "sections": [
+            {
+                "subTitle": "Unlikely Maestros",
+                "paragraph": "In the remote village of Gloomwood, a group of goblins discovers an ancient cache of magical musical instruments. Instead of using them for chaos and destruction, they find an unexpected passion for music. Their mission? To form an orchestra and perform at the prestigious Grand Festival of Harmony."
+            },
+            {
+                "subTitle": "Musical Mishaps",
+                "paragraph": "The goblins, untrained and prone to mischief, face a series of comical challenges as they try to master their instruments. From accidentally summoning spirits with their music to dealing with rival bands who sabotage their efforts, the goblins' journey is filled with laughter and unexpected heroics."
+            },
+            {
+                "subTitle": "A Symphony of Adventure",
+                "paragraph": "Gloomwood and its surroundings become the backdrop for the goblins' quest. They travel through enchanted forests, ancient ruins, and bustling markets, encountering magical creatures and uncovering secrets about the instruments they wield. Each performance brings them closer to their ultimate goal, as they learn the true power of music and unity."
+            }
+        ],
+        "setting": "Gloomwood",
+        "releaseDate": "2024-06-30"
+    },
+    {
+        "id": "4567lkjsdf832",
+        "title": "Kobold Crisis",
+        "slug": "kobold_crisis",
+        "heroImg": "kobold_crisis.jpg",
+        "sections": [
+            {
+                "subTitle": "A Crisis of Identity",
+                "paragraph": "In the quiet outskirts of the bustling city of Baldur's Gate, a group of kobolds finds themselves at a crossroads. Disillusioned with their traditional way of life, they seek a new purpose. However, their lack of direction leads to them wandering into random places, causing confusion and concern among the local inhabitants."
+            },
+            {
+                "subTitle": "The Adventurers' Dilemma",
+                "paragraph": "The adventurers are tasked with addressing the kobold crisis. What starts as a seemingly simple mission quickly turns complicated as they discover the depth of the kobolds' existential angst. The kobolds, eager to find new roles in life, unintentionally disrupt various communities, from farming villages to merchant caravans."
+            },
+            {
+                "subTitle": "Finding a New Path",
+                "paragraph": "Through a series of humorous and heartfelt encounters, the adventurers must help the kobolds discover a new place for themselves in the world. This journey takes them from the dark corners of ancient ruins to the heights of city councils, challenging the adventurers to balance empathy with practicality as they guide the kobolds toward a new identity."
+            }
+        ],
+        "setting": "Baldur's Gate and Surrounding Areas",
+        "releaseDate": "2024-06-30"
     }
 ]
