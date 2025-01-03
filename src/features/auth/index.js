@@ -1,4 +1,4 @@
-import LoginForm from "./components/LoginForm/LoginForm";
+import LoginForm from "./components/loginForm/LoginForm";
 import RegisterForm from "./components/registerForm/RegisterForm";
 
 export {
