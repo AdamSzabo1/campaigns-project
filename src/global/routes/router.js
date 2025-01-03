@@ -1,7 +1,10 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import DefaultLayout from "../layouts/defaultLayout/DefaultLayout";
 import { AppArea } from "../../shared";
-import { CampaignArticle, CampaignViewer, loadCampaignArticle, loadCampaignTitle } from "../../features/campaigns";
+import { CampaignArticle, CampaignForm, CampaignViewer, loadCampaignArticle, loadCampaignTitle } from "../../features/campaigns";
+import { LoginForm, RegisterForm } from "../../features/auth";
+import { loadUserData, UserProfile } from "../../features/user";
+import { Homepage } from "../../features/static";
 
 const router = createBrowserRouter([
     {
@@ -10,7 +13,26 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <h1>Index..</h1>
+                element: <Homepage />
+            },
+            {
+                path: 'auth',
+                element: <AppArea />,
+                children: [
+                    {
+                        path: 'login',
+                        element: <LoginForm />
+                    },
+                    {
+                        path: 'register',
+                        element: <RegisterForm />
+                    },
+                    {
+                        path: 'user-profile',
+                        element: <UserProfile />,
+                        loader: loadUserData
+                    }
+                ]
             },
             {
                 path: 'campaigns',
@@ -38,7 +60,7 @@ const router = createBrowserRouter([
                     },
                     {
                         path: 'upload',
-                        element: <h1>Upload...</h1>
+                        element: <CampaignForm />
                     }
                 ]
             },
