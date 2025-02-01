@@ -1,20 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import Navbar from "../Navbar/Navbar";
-import { getFirebaseApp } from "../../firebase";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { UserContext } from "../../user";
+
+// single source of truth
 
 const SiteHeader = () => {
 
-    const [userData, setUserData] = useState(null);
-
-    const app = getFirebaseApp();
-    const auth = getAuth(app);
-
-    useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
-            setUserData(user);
-        });
-    }, []);
+    const userData = useContext( UserContext );
 
     return (
         <header>

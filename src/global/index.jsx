@@ -8,6 +8,7 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 
 import './css/index.css';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { UserProvider } from '../features/user';
 
 const rootEl = document.getElementById('root');
 const root = createRoot(rootEl);
@@ -27,7 +28,11 @@ root.render(
                 <meta proprrty="og:url" content="https://campaigns-project-7c4ca.web.app/" />
                 <title>Campaigns</title>
             </Helmet>
-            <RouterProvider router={router} />
+
+            <UserProvider>
+                <RouterProvider router={router} />
+            </UserProvider>
+
         </HelmetProvider>
     </React.StrictMode>
 );

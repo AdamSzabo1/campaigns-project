@@ -37,6 +37,7 @@ const router = createBrowserRouter([
                         path: 'user-profile',
                         element: <UserProfile />,
                         loader: loadUserData,
+                        errorElement: <h2>Error while loading user</h2>
                     },
                 ],
             },

@@ -1,6 +1,4 @@
 import { Link } from "react-router";
-import { getFirebaseApp } from "../../firebase";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const Navbar = ({ userEmail }) => {
 

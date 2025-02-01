@@ -10,9 +10,14 @@ export default async function loadUserData() {
 
     const userData = await new Promise((resolve, reject) => {
 
-        onAuthStateChanged(auth, async (user) => {    
-            // const userRef = doc(db, 'users', user.uid);
-            const userRef = doc(db, 'users', 'XQZTmoWTshUABIwBz0Q0oBSpRU43');
+        onAuthStateChanged(auth, async (user) => {
+
+            if (!user) {
+                return reject(user);
+            }
+
+            const userRef = doc(db, 'users', user.uid);
+            // const userRef = doc(db, 'users', 'XQZTmoWTshUABIwBz0Q0oBSpRU43');
 
             const userSnapshot = await getDoc(userRef)
     

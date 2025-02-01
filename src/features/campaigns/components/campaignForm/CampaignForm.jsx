@@ -1,13 +1,12 @@
-import { useImmerReducer } from "use-immer";
-import addQueryCampaign from "../../firestore/addQueryCampaign";
+import { useImmerReducer } from 'use-immer';
+import addQueryCampaign from '../../firestore/addQueryCampaign';
 
 const reducer = (draft, action) => {
-
     const { type, payload } = action;
 
     switch (type) {
         case 'addSection':
-            draft.sections.push({ subTitle: "", paragraph: "" });
+            draft.sections.push({ subTitle: '', paragraph: '' });
             break;
         case 'updateSectionTitle':
             draft.sections[payload.index].subTitle = payload.title;
@@ -17,14 +16,13 @@ const reducer = (draft, action) => {
             break;
         default:
     }
-}
+};
 
 const initialCampaign = {
-    sections: []
+    sections: [],
 };
 
 const CampaignForm = () => {
-
     const [campaign, dispatch] = useImmerReducer(reducer, initialCampaign);
 
     const onSubmit = (event) => {
@@ -34,7 +32,6 @@ const CampaignForm = () => {
         const formValues = Array.from(formData.entries());
 
         let formObj = formValues.reduce((acc, item) => {
-
             acc[item[0]] = item[1];
 
             return acc;
@@ -43,18 +40,17 @@ const CampaignForm = () => {
         formObj = { ...formObj, sections: campaign.sections };
 
         addQueryCampaign(formObj);
-    }
+    };
 
     const onAddSection = () => {
         dispatch({ type: 'addSection' });
-    }
+    };
 
     return (
         <div>
             <h1>Campaign Form</h1>
 
-            <form onSubmit={onSubmit} >
-
+            <form onSubmit={onSubmit}>
                 <div>
                     <label htmlFor="cmpg-title">Title: </label>
                     <input type="text" name="title" id="cmpg-title" />
@@ -80,50 +76,51 @@ const CampaignForm = () => {
                     <input type="datetime-local" name="releaseDate" id="cmpg-release-date" />
                 </div>
 
-                {
-                    campaign.sections.map((item, index) => (
-                        <section key={index} >
+                {campaign.sections.map((item, index) => (
+                    <section key={index}>
+                        <h4>Section {index}:</h4>
 
-                            <h4>Section {index}:</h4>
-
-                            <div>
-                                <label htmlFor="cmpg-sub-title">Sub-Title: </label>
-                                <input
-                                    type="text"
-                                    name="subTitle"
-                                    id="cmpg-sub-title"
-                                    value={item.subTitle}
-                                    onChange={(event) => dispatch({
+                        <div>
+                            <label htmlFor="cmpg-sub-title">Sub-Title: </label>
+                            <input
+                                type="text"
+                                name="subTitle"
+                                id="cmpg-sub-title"
+                                value={item.subTitle}
+                                onChange={(event) =>
+                                    dispatch({
                                         type: 'updateSectionTitle',
-                                        payload: { index, title: event.target.value }
-                                    })}
-                                />
-                            </div>
+                                        payload: { index, title: event.target.value },
+                                    })
+                                }
+                            />
+                        </div>
 
-                            <div>
-                                <label htmlFor="cmpg-paragraph">Paragraph: </label>
-                                <textarea
-                                    name="paragraph"
-                                    id="cmpg-paragraph"
-                                    value={item.paragraph}
-                                    onChange={(event) => dispatch({
+                        <div>
+                            <label htmlFor="cmpg-paragraph">Paragraph: </label>
+                            <textarea
+                                name="paragraph"
+                                id="cmpg-paragraph"
+                                value={item.paragraph}
+                                onChange={(event) =>
+                                    dispatch({
                                         type: 'updateSectionParagraph',
-                                        payload: { index, paragraph: event.target.value }
-                                    })}
-                                ></textarea>
-                            </div>
+                                        payload: { index, paragraph: event.target.value },
+                                    })
+                                }
+                            ></textarea>
+                        </div>
+                    </section>
+                ))}
 
-                        </section>
-                    ))
-                }
-
-                <button type="button" onClick={onAddSection} >Add Section</button>
+                <button type="button" onClick={onAddSection}>
+                    Add Section
+                </button>
 
                 <button type="submit">Send</button>
-
             </form>
         </div>
     );
-}
+};
 
 export default CampaignForm;
